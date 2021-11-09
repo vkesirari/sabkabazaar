@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Shopping kart</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/general.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- header section -->
+      <header class="header-section content-center">
+        <nav class="nav-section same-padding-sm">
+          <a href="sign-in.html" class="link">SignIn</a>
+          <a href="register.html" class="link">Register</a>
+        </nav>
+        <menu class="menu-section">
+          <div>
+            <img class="logo" src="images/logo.png" alt="Shopping kart logo" />
+          </div>
+          <div class="menu-cart-section">
+            <div class="btn-section same-padding-sm">
+              <a href="home.html" class="link marign-right-sm">Home</a>
+              <a href="index.html" class="link">Products</a>
+            </div>
+            <div class="cart-section">
+              <span>
+                <svg
+                  version="1.1"
+                  id="Layer_1"
+                  class="cart-icon"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 24 24"
+                  style="enable-background: new 0 0 24 24"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+
+                0 items</span
+              >
+            </div>
+          </div>
+        </menu>
+      </header>
+      <hr class="divider-border" />
+      <!-- Slideshow container -->
+      <div class="slideshow-container content-center">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img class="slider-img" src="/static/images/offers/offer1.jpg" />
+        </div>
+
+        <div class="mySlides fade">
+          <img class="slider-img" src="/static/images/offers/offer2.jpg" />
+        </div>
+
+        <div class="mySlides fade">
+          <img class="slider-img" src="/static/images/offers/offer3.jpg" />
+        </div>
+        <div class="mySlides fade">
+          <img class="slider-img" src="/static/images/offers/offer4.jpg" />
+        </div>
+        <div class="mySlides fade">
+          <img class="slider-img" src="/static/images/offers/offer5.jpg" />
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">Prev</a>
+        <a class="next" onclick="plusSlides(1)">Next</a>
+      </div>
+      <!-- The dots/circles -->
+      <div id="dot-container" style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+      <!-- <br /> -->
+      <div class="img-photo-container">
+        <div class="home-img">
+          <img src="/static/images/category/fruits.png" alt="" />
+        </div>
+        <div class="img-container-details">
+          <h3>Fruits & Vegetables</h3>
+          <p>A variety of fresh fruits and Vegetables</p>
+          <button class="btn">Explore fruit-and-vegetables</button>
+        </div>
+      </div>
+      <div class="img-photo-container">
+        <div class="img-container-details">
+          <h3>Fruits & Vegetables</h3>
+          <p>A variety of fresh fruits and Vegetables</p>
+          <button class="btn">Explore fruit-and-vegetables</button>
+        </div>
+        <div class="home-img">
+          <img src="/static/images/category/bakery.png" alt="" />
+        </div>
+      </div>
+      <div class="img-photo-container">
+        <div class="home-img">
+          <img src="/static/images/category/beverages.png" alt="" />
+        </div>
+        <div class="img-container-details">
+          <h3>Fruits & Vegetables</h3>
+          <p>A variety of fresh fruits and Vegetables</p>
+          <button class="btn">Explore fruit-and-vegetables</button>
+        </div>
+      </div>
+      <div class="img-photo-container">
+        <div class="img-container-details">
+          <h3>Fruits & Vegetables</h3>
+          <p>A variety of fresh fruits and Vegetables</p>
+          <button class="btn">Explore fruit-and-vegetables</button>
+        </div>
+        <div class="home-img">
+          <img src="/static/images/category/beauty.png" alt="" />
+        </div>
+      </div>
+      <div class="img-photo-container">
+        <div class="home-img">
+          <img src="/static/images/category/baby.png" alt="" />
+        </div>
+        <div class="img-container-details">
+          <h3>Fruits & Vegetables</h3>
+          <p>A variety of fresh fruits and Vegetables</p>
+          <button class="btn">Explore fruit-and-vegetables</button>
+        </div>
+      </div>
+      <!-- footer section -->
+      <footer class="footer-section-home content-center">
+        Copywrite <span>&copy;</span>2011-2018 Sabka Bazar Grocery Supplies Pvt
+        Ltd
+      </footer>
+    </div>
+    <script src="js/home.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

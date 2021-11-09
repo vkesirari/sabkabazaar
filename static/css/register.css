@@ -1,0 +1,75 @@
+.signup-container {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  display: flex;
+  justify-content: center;
+  /* height: 100vh; */
+}
+.signup-text {
+  /* background-color: rosybrown; */
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.signup-form {
+  /* background-color: blue; */
+  padding: 20px;
+}
+/**************************/
+/* CTA SECTION */
+/**************************/
+
+.section-cta {
+  /* padding: 20px; */
+}
+
+.cta {
+  display: grid;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 8px 0px;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 5px;
+  font-size: 18px;
+  border: none;
+  /* background-color: #fdf2e9; */
+  /* border-radius: 9px; */
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); */
+  border-bottom: 1px solid black;
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 8px rgba(253, 242, 233, 0.5);
+}
+.btn,
+.btn:link,
+.btn:visited {
+  padding: 10px 0px;
+  background-color: hsl(342deg 65% 45%);
+  color: white;
+}
+
+.btn--form {
+  margin-top: 12px;
+}

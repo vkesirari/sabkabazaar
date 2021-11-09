@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  /* color: gray; */
+  font-size: 14px;
+  /* height: 100vh; */
+}
+.logo {
+  width: 100px;
+}
+/******************/
+General CSS rules
+/******************/
+
+/* button {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  color: gray;
+  padding: 8px 12px;
+} */
+
+.marign-right-sm {
+  margin-right: 16px;
+}
+
+.same-padding-sm {
+  display: flex;
+  gap: 20px;
+}
+.content-center {
+  width: 950px;
+  margin: 0 auto;
+}
+.content-center-register {
+  width: 950px;
+  margin: 0 auto;
+}
+.btn,
+.btn:link,
+.btn:visited {
+  padding: 10px 10px;
+  background-color: hsl(342deg 65% 45%);
+  color: white;
+  border: 0px;
+}
+
+.common-padding {
+  padding: 10px;
+}
+
+.last-box-margin {
+  margin-bottom: 20px;
+}
+
+/* .main-container {
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+} */

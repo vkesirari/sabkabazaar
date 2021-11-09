@@ -1,0 +1,17 @@
+.btn--small {
+  padding: 0px 5px;
+}
+
+.process-content {
+  text-align: center;
+}
+.cart-details {
+  text-align: center;
+  justify-content: center;
+}
+.top-cart-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
