@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+/* update it to px to rem
+1rem = 16px */
+
 body {
   font-family: sans-serif;
   /* color: gray; */
@@ -50,6 +53,7 @@ General CSS rules
   background-color: hsl(342deg 65% 45%);
   color: white;
   border: 0px;
+  cursor: pointer;
 }
 
 .common-padding {
@@ -60,7 +64,28 @@ General CSS rules
   margin-bottom: 20px;
 }
 
-/* .main-container {
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
-} */
+.main-container {
+  /* filter: blur(1px);
+  -webkit-filter: blur(1px); */
+  /* height: 100vh; */
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .content-center {
+    width: 100%;
+  }
+  .same-padding-sm {
+    display: none;
+  }
+  .content-center-register {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* For tablet phones: */
+  .content-center {
+    width: 100%;
+  }
+}

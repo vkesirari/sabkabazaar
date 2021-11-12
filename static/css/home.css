@@ -17,9 +17,10 @@ img {
   /* max-width: 1000px; */
   position: relative;
   margin: auto;
+  box-shadow: 0 8px 8px -8px #a1887f;
+  padding: 5px;
 }
 #dot-container {
-  position: absolute;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -110,13 +111,14 @@ img {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   text-align: center;
-  /* box-shadow: 0 8px 8px -4px lightblue; */
+  padding: 5px;
+  box-shadow: 0 8px 8px -8px #a1887f;
 }
 .home-img img {
   width: 300px;
 }
 .img-container-details h3,
-p,
+.para-des,
 button {
   margin-bottom: 15px;
 }
@@ -144,5 +146,31 @@ button {
   .next,
   .text {
     font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .home-img img {
+    width: 150px;
+  }
+  .img-container-details {
+    padding: 10px;
+  }
+
+  #dot-container {
+    top: auto;
+    position: inherit;
+  }
+  .prev,
+  .next {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #dot-container {
+    top: auto;
+    position: inherit;
   }
 }

@@ -7,573 +7,98 @@
     <title>Shopping Kart</title>
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="../static/css/cart.css">
+    <link rel="stylesheet" href="../static/css/cart.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("../static/common/header.html");
+      });
+      $(function () {
+        $("#footer").load("../static/common/footer.html");
+      });
+    </script>
   </head>
   <body>
     <div class="main-container">
-
-    <header class="header-section content-center">
-      <nav class="nav-section same-padding-sm">
-        <a href="sign-in.html" class="link">SignIn</a>
-        <a href="register.html" class="link">Register</a>
-      </nav>
-      <menu class="menu-section">
-        <div>
-          <img class="logo" src="images/logo.png" alt="Shopping kart logo" />
-        </div>
-        <div class="menu-cart-section">
-          <div class="btn-section same-padding-sm">
-            <a href="home.html" class="link marign-right-sm">Home</a>
-            <a href="index.html" class="link">Products</a>
-          </div>
-          <div class="cart-section" onclick="openPage()">
-            <span>
-              <svg
-                version="1.1"
-                id="Layer_1"
-                class="cart-icon"
-                focusable="false"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 24 24"
-                style="enable-background: new 0 0 24 24"
-                xml:space="preserve"
-              >
-                <path
-                  d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
-                />
-              </svg>
-
-              1 items</span
-            >
-          </div>
-        </div>
-      </menu>
-    </header>
-    <hr class="divider-border" />
-    <section class="product-container content-center">
-      <section class="product-section">
-        <ul>
-          <li class="products-lists">Fruits & Vegetables</li>
+      <header class="header-section content-center" id="header"></header>
+      <hr class="divider-border" />
+      <section class="product-container content-center">
+        <section class="product-section">
+          <ul id="category-items" class="category-items">
+            <!-- <li class="products-lists">Fruits & Vegetables</li>
           <li class="products-lists">Bakery Cakes and Dairy</li>
           <li class="products-lists">Beverages</li>
           <li class="products-lists">Beauty and Hygiene</li>
-          <li class="products-lists">Baby Care</li>
-        </ul>
-      </section>
-      <section class="product-details">
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/fruit-n-veg/kiwi-green.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <div class="product-price">
-              <p>20</p>
-            </div>
-            <button class="btn">Buy Now</button>
-          </div>
-          <div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/fruit-n-veg/apple.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">40</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/fruit-n-veg/pomegrante.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/fruit-n-veg/capsicum-green.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/fruit-n-veg/tomato.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/bakery-cakes-dairy/bread.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/bakery-cakes-dairy/paneer.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products//bakery-cakes-dairy/yogurt-blue.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/bakery-cakes-dairy/yogurt-red.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/beverages/tata-tea.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/beverages/red-label.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/beverages/bournvita.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/beverages/bournvita.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/beauty-hygiene/listerine.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/beauty-hygiene/shampoo.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/beauty-hygiene/dove.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/beauty-hygiene/tissues.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/beauty-hygiene/dove.jpg "
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/baby/pampers.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/baby/mamy.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/baby/shampoo.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/baby/cerelac.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/baby/baby-dove.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/baby/shampoo.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <div class="product-detail">
-          <h4 class="product-title">Product--details</h4>
-          <img
-            class="product-image"
-            src="/static//images/products/baby/wipes.jpg"
-            alt="kiwi"
-          />
-          <div class="product-des">
-            <p>
-              these are just the details of the product--details pricing.
-            </p>
-          </div>
-          <div class="product-price-section">
-            <p class="product-price">89</p>
-            <button class="btn">Buy Now</button>
-          </div>
-<div class="dotted-line"></div>
-        </div>
-        <!-- Cart container -->
-        <div class="pop-cart-details">
+          <li class="products-lists">Baby Care</li> -->
+          </ul>
+        </section>
+        <section class="product-details" id="main-product-details">
+          <!-- product details listing -->
+        </section>
+        <section>
+          <!-- Cart container -->
           <section id="product-cart-details" class="product-cart-details">
             <section class="top-cart-section">
-              <h3>MyCart<small>(1 item)</small></h3>
+              <h3>MyCart(<small id="cart-box">0 item</small>)</h3>
               <h3 class="closeBtn" onclick="closeCart()">X</h3>
             </section>
-            <div class="cart-details">
-              <div class="cart-detail">
-                <!-- <div> -->
-                  <img
-                  class="cart-detail-img"
-                  src="images/products/fruit-n-veg/apple.jpg"
-                  alt=""
-                  />
-                <!-- </div> -->
-                <div class="cart-item-detail">
-                  <h4>Apple-Washington,Regular,4 pcs</h4>
-                  <button class="btn--small">-</button>
-                  <span class="item-detail">1</span>
-                  <button class="btn--small">+</button>
-                  <span class="item-detail">x</span>
-                  <span>Rs.187</span>
-                </div>
+            <div class="cart-details" id="cart-details-cal">
+              <div class="no-product-detail" id="no-product-detail">
+                <h4>No items in your cart</h4>
+                <p>Your favourite items are just a click away</p>
               </div>
-              
-              <div class="cart-price common-padding"><span>Rs.187</span></div>
             </div>
-            <div class="content-details-cart">
+            <!-- <div class="cart-details" id="cart-details-cal">
+          <div class="cart-detail">
+              <img
+              class="cart-detail-img"
+              src="images/products/fruit-n-veg/apple.jpg"
+              alt=""
+              />
+            <div class="cart-item-detail">
+              <h4>Apple-Washington,Regular,4 pcs</h4>
+              <button class="btn--small" onclick="desQty()">-</button>
+              <span class="item-detail" id="cart-value-qty">1</span>
+              <button class="btn--small" onclick="insQty()">+</button>
+              <span class="item-detail">x</span>
+              <span id="cart-qty-price">Rs.187</span>
+            </div>
+          </div>
+          
+          <div class="cart-price common-padding"><span id="cart-qty-price">Rs.187</span></div>
+        </div> -->
+            <div class="content-details-cart" id="content-details-cart">
               <img src="images/lowest-price.png" alt="" />
               <h3>You won't find it cheaper anywhere</h3>
             </div>
-            <div class="blank-div-cart">
+            <div class="blank-div-cart" id="blank-div-cart"></div>
 
-            </div>
-            
-            <div class="procced-details-cart">
+            <div class="procced-details-cart" id="procced-details-cart">
               <div>
-                <p class="procced-msg">Promo code can be applied on payment page</p>
+                <p class="procced-msg">
+                  Promo code can be applied on payment page
+                </p>
               </div>
               <div class="btn process-content">
                 <div>Procced to Checkout</div>
-                <div>Rs.187 ></div>
+                <div>Rs.<span id="cart-qty-price">187 </span></div>
+              </div>
+            </div>
+            <div
+              class="procced-details-cart-processed"
+              id="procced-details-cart-processed"
+            >
+              <div class="btn">
+                <div>Start Shopping</div>
               </div>
             </div>
           </section>
-        </div>
         </section>
-        
       </section>
+      <footer class="footer-section" id="footer"></footer>
     </div>
-  </div>
 
-    <!-- <footer class="footer-section">
-      Copywrite <span>&copy;</span>2011-2018 Sabka Bazar Grocery Supplies Pvt
-      Ltd
-    </footer> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/static/js/main.js" type="text/javascript" defer></script>
   </body>
 </html>
